@@ -12,8 +12,6 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
-    using OmegaTec.Models.ViewModels;
-
 #nullable restore
 #line 1 "C:\Users\Mari\Documents\.Todos os Projetos\7 Semestre\ProjetoSemestre\ProjOmegaTec\OmegaTec\OmegaTec\Views\_ViewImports.cshtml"
 using OmegaTec;
