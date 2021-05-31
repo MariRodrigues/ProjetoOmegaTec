@@ -30,6 +30,12 @@ namespace OmegaTec
             services.AddDbContext<OmegaTecContext>(options =>
                     options.UseMySql(Configuration.GetConnectionString("OmegaTecContext"), builder =>
                     builder.MigrationsAssembly("OmegaTec")));
+
+            services.AddDbContext<OmegaTecContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("OmegaTecContext")));
+
+            services.AddDbContext<OmegaTecContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("OmegaTecContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

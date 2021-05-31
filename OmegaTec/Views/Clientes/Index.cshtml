@@ -8,7 +8,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0">Painel - Cadastros</h1>
+                <h1 class="m-0">Nossos clientes</h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
@@ -32,7 +32,16 @@
                             <thead>
                                 <tr>
                                     <th>
-                                        @Html.DisplayNameFor(model => model.Nome)
+                                        @Html.DisplayNameFor(model => model.NomeCliente)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Cnpj)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Endereco)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Telefone)
                                     </th>
                                     <th></th>
                                 </tr>
@@ -42,24 +51,30 @@
                                 {
                                     <tr>
                                         <td>
-                                            @Html.DisplayFor(modelItem => item.Nome)
+                                            @Html.DisplayFor(modelItem => item.NomeCliente)
                                         </td>
                                         <td>
-                                            <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
-                                            <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
-                                            <a asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
+                                            @Html.DisplayFor(modelItem => item.Cnpj)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Endereco)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Telefone)
+                                        </td>
+                                        <td>
+                                            <a asp-action="Edit" asp-route-id="@item.ClienteId">Editar</a> |
+                                            <a asp-action="Details" asp-route-id="@item.ClienteId">Detalhes</a> |
+                                            <a asp-action="Delete" asp-route-id="@item.ClienteId">Deletar</a>
                                         </td>
                                     </tr>
                                 }
                             </tbody>
                         </table>
-
                     </div>
                 </div>
             </div>
         </div>
-        </div>
-    </section>
-
-
+    </div>
+</section>
 

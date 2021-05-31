@@ -34,7 +34,7 @@ namespace OmegaTec.Controllers
             }
 
             var cliente = await _context.Cliente
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.ClienteId == id);
             if (cliente == null)
             {
                 return NotFound();
@@ -54,7 +54,7 @@ namespace OmegaTec.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome")] Cliente cliente)
+        public async Task<IActionResult> Create([Bind("ClienteId,NomeCliente,Cnpj,Endereco,Telefone")] Cliente cliente)
         {
             if (ModelState.IsValid)
             {
@@ -86,9 +86,9 @@ namespace OmegaTec.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome")] Cliente cliente)
+        public async Task<IActionResult> Edit(int id, [Bind("ClienteId,NomeCliente,Cnpj,Endereco,Telefone")] Cliente cliente)
         {
-            if (id != cliente.Id)
+            if (id != cliente.ClienteId)
             {
                 return NotFound();
             }
@@ -102,7 +102,7 @@ namespace OmegaTec.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ClienteExists(cliente.Id))
+                    if (!ClienteExists(cliente.ClienteId))
                     {
                         return NotFound();
                     }
@@ -125,7 +125,7 @@ namespace OmegaTec.Controllers
             }
 
             var cliente = await _context.Cliente
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.ClienteId == id);
             if (cliente == null)
             {
                 return NotFound();
@@ -147,7 +147,7 @@ namespace OmegaTec.Controllers
 
         private bool ClienteExists(int id)
         {
-            return _context.Cliente.Any(e => e.Id == id);
+            return _context.Cliente.Any(e => e.ClienteId == id);
         }
     }
 }

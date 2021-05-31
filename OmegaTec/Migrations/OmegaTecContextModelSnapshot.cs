@@ -18,16 +18,56 @@ namespace OmegaTec.Migrations
 
             modelBuilder.Entity("OmegaTec.Models.Cliente", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("ClienteId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("Nome")
+                    b.Property<int>("Cnpj")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Endereco")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
-                    b.HasKey("Id");
+                    b.Property<string>("NomeCliente")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("Telefone")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.HasKey("ClienteId");
 
                     b.ToTable("Cliente");
+                });
+
+            modelBuilder.Entity("OmegaTec.Models.Tarefa", b =>
+                {
+                    b.Property<int>("TarefaId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int>("ClienteId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Descricao")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<int>("Prioridade")
+                        .HasColumnType("int");
+
+                    b.HasKey("TarefaId");
+
+                    b.HasIndex("ClienteId");
+
+                    b.ToTable("Tarefa");
+                });
+
+            modelBuilder.Entity("OmegaTec.Models.Tarefa", b =>
+                {
+                    b.HasOne("OmegaTec.Models.Cliente", "NomeCliente")
+                        .WithMany()
+                        .HasForeignKey("ClienteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

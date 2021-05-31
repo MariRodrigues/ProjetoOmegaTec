@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mari\\Documents\\.Todos os Projetos\\7 Semestre\\ProjetoSemestre\\ProjOmegaTec\\OmegaTec\\OmegaTec\\OmegaTec.csproj": {}
+    "C:\\Users\\Mari\\Documents\\Todos os Projetos\\7 Semestre\\ProjetoSemestre\\ProjOmegaTec\\OmegaTec\\OmegaTec\\OmegaTec.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mari\\Documents\\.Todos os Projetos\\7 Semestre\\ProjetoSemestre\\ProjOmegaTec\\OmegaTec\\OmegaTec\\OmegaTec.csproj": {
+    "C:\\Users\\Mari\\Documents\\Todos os Projetos\\7 Semestre\\ProjetoSemestre\\ProjOmegaTec\\OmegaTec\\OmegaTec\\OmegaTec.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mari\\Documents\\.Todos os Projetos\\7 Semestre\\ProjetoSemestre\\ProjOmegaTec\\OmegaTec\\OmegaTec\\OmegaTec.csproj",
+        "projectUniqueName": "C:\\Users\\Mari\\Documents\\Todos os Projetos\\7 Semestre\\ProjetoSemestre\\ProjOmegaTec\\OmegaTec\\OmegaTec\\OmegaTec.csproj",
         "projectName": "OmegaTec",
-        "projectPath": "C:\\Users\\Mari\\Documents\\.Todos os Projetos\\7 Semestre\\ProjetoSemestre\\ProjOmegaTec\\OmegaTec\\OmegaTec\\OmegaTec.csproj",
+        "projectPath": "C:\\Users\\Mari\\Documents\\Todos os Projetos\\7 Semestre\\ProjetoSemestre\\ProjOmegaTec\\OmegaTec\\OmegaTec\\OmegaTec.csproj",
         "packagesPath": "C:\\Users\\Mari\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mari\\Documents\\.Todos os Projetos\\7 Semestre\\ProjetoSemestre\\ProjOmegaTec\\OmegaTec\\OmegaTec\\obj\\",
+        "outputPath": "C:\\Users\\Mari\\Documents\\Todos os Projetos\\7 Semestre\\ProjetoSemestre\\ProjOmegaTec\\OmegaTec\\OmegaTec\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

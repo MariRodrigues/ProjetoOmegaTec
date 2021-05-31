@@ -7,7 +7,13 @@ namespace OmegaTec.Models
 {
     public class Cliente
     {
-        public int Id { get; set; }
-        public String Nome { get; set; }
+        public int ClienteId { get; set; }
+        public String NomeCliente { get; set; }
+        public int Cnpj { get; set; }
+
+        public String Endereco { get; set; }
+
+        public String Telefone { get; set; }
+
     }
 }

@@ -15,5 +15,7 @@ namespace OmegaTec.Data
         }
 
         public DbSet<OmegaTec.Models.Cliente> Cliente { get; set; }
+
+        public DbSet<OmegaTec.Models.Tarefa> Tarefa { get; set; }
     }
 }
